@@ -1,0 +1,480 @@
+@use 'variables' as *;
+
+// 3D Floating Vinyl Disc
+.vinyl-3d {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 0 auto;
+
+    .vinyl-disc {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: 
+            radial-gradient(circle at 50% 50%, transparent 15%, rgba(0,0,0,0.8) 15.5%, rgba(0,0,0,0.8) 16%, transparent 16.5%),
+            radial-gradient(circle at 50% 50%, transparent 30%, rgba(0,0,0,0.6) 30.5%, rgba(0,0,0,0.6) 31%, transparent 31.5%),
+            radial-gradient(circle at 50% 50%, transparent 45%, rgba(0,0,0,0.4) 45.5%, rgba(0,0,0,0.4) 46%, transparent 46.5%),
+            conic-gradient(from 0deg, #1a1a2e, #16213e, #0f3460, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+        box-shadow: 
+            0 0 30px rgba($accent-purple, 0.5),
+            inset 0 0 60px rgba(0,0,0,0.5);
+        transform-style: preserve-3d;
+        animation: vinylSpin 8s linear infinite, vinylFloat 4s ease-in-out infinite;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: $accent-gradient;
+            box-shadow: 0 0 20px rgba($accent-purple, 0.8);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: $primary-dark;
+        }
+    }
+
+    .vinyl-glow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $accent-gradient;
+        filter: blur(40px);
+        opacity: 0.3;
+        animation: glowPulse 3s ease-in-out infinite;
+    }
+}
+
+@keyframes vinylSpin {
+    from { transform: rotateX(60deg) rotateZ(0deg); }
+    to { transform: rotateX(60deg) rotateZ(360deg); }
+}
+
+@keyframes vinylFloat {
+    0%, 100% { transform: rotateX(60deg) translateY(0); }
+    50% { transform: rotateX(60deg) translateY(-15px); }
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+}
+
+// 3D Music Cube
+.music-cube {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    perspective: 600px;
+    margin: 2rem auto;
+
+    .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: cubeRotate 12s linear infinite;
+
+        .face {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: rgba($accent-purple, 0.1);
+            border: 2px solid rgba($accent-purple, 0.3);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+
+            &.front { transform: translateZ(60px); }
+            &.back { transform: rotateY(180deg) translateZ(60px); }
+            &.right { transform: rotateY(90deg) translateZ(60px); }
+            &.left { transform: rotateY(-90deg) translateZ(60px); }
+            &.top { transform: rotateX(90deg) translateZ(60px); }
+            &.bottom { transform: rotateX(-90deg) translateZ(60px); }
+        }
+    }
+
+    .cube-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150px;
+        height: 150px;
+        transform: translate(-50%, -50%);
+        background: $accent-gradient;
+        filter: blur(60px);
+        opacity: 0.2;
+        border-radius: 50%;
+        animation: glowPulse 4s ease-in-out infinite;
+    }
+}
+
+@keyframes cubeRotate {
+    0% { transform: rotateX(-20deg) rotateY(0deg); }
+    100% { transform: rotateX(-20deg) rotateY(360deg); }
+}
+
+// 3D Floating Headphones
+.headphones-3d {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    perspective: 800px;
+
+    .headphones-wrapper {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        animation: headphonesFloat 5s ease-in-out infinite;
+    }
+
+    .headband {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 60px;
+        border: 8px solid transparent;
+        border-top-color: $accent-purple;
+        border-radius: 60px 60px 0 0;
+        box-shadow: 0 -5px 20px rgba($accent-purple, 0.5);
+    }
+
+    .ear-cup {
+        position: absolute;
+        width: 50px;
+        height: 60px;
+        background: linear-gradient(135deg, $accent-purple, $accent-blue);
+        border-radius: 10px;
+        box-shadow: 
+            0 10px 30px rgba(0,0,0,0.5),
+            inset 0 2px 10px rgba(255,255,255,0.2);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 35px;
+            height: 45px;
+            background: $primary-dark;
+            border-radius: 8px;
+        }
+
+        &.left {
+            left: 15px;
+            top: 60px;
+            transform: rotateY(-20deg);
+        }
+
+        &.right {
+            right: 15px;
+            top: 60px;
+            transform: rotateY(20deg);
+        }
+    }
+
+    .glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba($accent-purple, 0.3) 0%, transparent 70%);
+        animation: glowPulse 3s ease-in-out infinite;
+    }
+}
+
+@keyframes headphonesFloat {
+    0%, 100% { 
+        transform: rotateX(10deg) rotateY(0deg) translateY(0); 
+    }
+    25% { 
+        transform: rotateX(10deg) rotateY(10deg) translateY(-10px); 
+    }
+    50% { 
+        transform: rotateX(10deg) rotateY(0deg) translateY(-15px); 
+    }
+    75% { 
+        transform: rotateX(10deg) rotateY(-10deg) translateY(-10px); 
+    }
+}
+
+// 3D Sound Wave Ring
+.sound-ring-3d {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    perspective: 1000px;
+
+    .ring {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        transform-style: preserve-3d;
+        animation: ringRotate 6s linear infinite;
+
+        &:nth-child(1) {
+            border-top-color: $accent-purple;
+            border-bottom-color: $accent-purple;
+            animation-delay: 0s;
+        }
+
+        &:nth-child(2) {
+            width: 160px;
+            height: 160px;
+            top: 20px;
+            left: 20px;
+            border-left-color: $accent-blue;
+            border-right-color: $accent-blue;
+            animation-delay: -1s;
+            animation-direction: reverse;
+        }
+
+        &:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            top: 40px;
+            left: 40px;
+            border-top-color: $accent-pink;
+            border-bottom-color: $accent-pink;
+            animation-delay: -2s;
+        }
+    }
+
+    .center-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        color: $text-light;
+        z-index: 10;
+    }
+
+    .ring-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150px;
+        height: 150px;
+        transform: translate(-50%, -50%);
+        background: $accent-gradient;
+        filter: blur(50px);
+        opacity: 0.3;
+        border-radius: 50%;
+    }
+}
+
+@keyframes ringRotate {
+    0% { transform: rotateX(70deg) rotateZ(0deg); }
+    100% { transform: rotateX(70deg) rotateZ(360deg); }
+}
+
+// Hero 3D Container
+.hero-3d-element {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+    opacity: 0.8;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+
+// Section 3D Elements
+.section-3d-element {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+
+    &.section-3d-left {
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &.section-3d-right {
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+
+// Small variant for sound ring
+.sound-ring-3d.small {
+    width: 150px;
+    height: 150px;
+
+    .ring:nth-child(2) {
+        width: 120px;
+        height: 120px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .ring:nth-child(3) {
+        width: 90px;
+        height: 90px;
+        top: 30px;
+        left: 30px;
+    }
+
+    .center-icon {
+        font-size: 1.5rem;
+    }
+
+    .ring-glow {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+// Floating Music Notes
+.floating-notes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+
+    .note {
+        position: absolute;
+        font-size: 2rem;
+        color: rgba($accent-purple, 0.3);
+        animation: floatNote 8s ease-in-out infinite;
+
+        &:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        &:nth-child(2) { left: 85%; top: 30%; animation-delay: -2s; color: rgba($accent-blue, 0.3); }
+        &:nth-child(3) { left: 15%; top: 70%; animation-delay: -4s; color: rgba($accent-pink, 0.3); }
+        &:nth-child(4) { left: 90%; top: 60%; animation-delay: -6s; }
+        &:nth-child(5) { left: 5%; top: 45%; animation-delay: -1s; color: rgba($accent-blue, 0.3); }
+        &:nth-child(6) { left: 80%; top: 80%; animation-delay: -3s; color: rgba($accent-pink, 0.3); }
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+@keyframes floatNote {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translateY(-20px) rotate(10deg) scale(1.1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-10px) rotate(-5deg) scale(1);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translateY(-25px) rotate(5deg) scale(1.05);
+        opacity: 0.5;
+    }
+}
+
+// 3D Speaker
+.speaker-3d {
+    position: relative;
+    width: 100px;
+    height: 140px;
+    perspective: 500px;
+
+    .speaker-body {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(145deg, #2a2a4a, #1a1a2e);
+        border-radius: 10px;
+        transform-style: preserve-3d;
+        animation: speakerPulse 2s ease-in-out infinite;
+        box-shadow: 
+            0 20px 40px rgba(0,0,0,0.5),
+            inset 0 2px 10px rgba(255,255,255,0.05);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: 
+                radial-gradient(circle at 50% 50%, $primary-dark 30%, transparent 31%),
+                radial-gradient(circle at 50% 50%, rgba($accent-purple, 0.3) 50%, transparent 51%),
+                linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+        }
+    }
+
+    .speaker-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba($accent-purple, 0.2) 0%, transparent 70%);
+        animation: glowPulse 2s ease-in-out infinite;
+    }
+}
+
+@keyframes speakerPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}

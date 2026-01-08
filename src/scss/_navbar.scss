@@ -1,0 +1,124 @@
+@use 'variables' as *;
+
+// Navbar
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba($primary-dark, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+    border-bottom: 1px solid $glass-border;
+    transition: all 0.3s ease;
+
+    &.scrolled {
+        padding: 0.8rem 3rem;
+        background: rgba($primary-dark, 0.95);
+    }
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $text-light;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid $glass-border;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+
+    a {
+        color: $text-muted;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        position: relative;
+        transition: color 0.3s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: $accent-gradient;
+            transition: width 0.3s ease;
+        }
+
+        &:hover {
+            color: $text-light;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &.active {
+            color: $text-light;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Mobile Menu Button
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+
+    span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: $text-light;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    &.active {
+        span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+    }
+}

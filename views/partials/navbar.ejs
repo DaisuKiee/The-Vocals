@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <a href="/" class="nav-brand">
+        <img src="/images/icon.jpg" alt="The Vocals" class="brand-logo">
+        <span>The Vocals</span>
+    </a>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+        <a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">Home</a>
+        <a href="/#bots">Our Bots</a>
+        <a href="/#features">Features</a>
+        <a href="/creators" class="<%= activePage === 'creators' ? 'active' : '' %>">Creators</a>
+        <a href="/sponsors" class="<%= activePage === 'sponsors' ? 'active' : '' %>">Sponsors</a>
+        <a href="/#support">Support</a>
+    </div>
+</nav>

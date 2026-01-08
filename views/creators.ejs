@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', { 
+        title: 'Creators', 
+        description: 'Meet the creators behind The Vocals Discord music bots.',
+        canonical: '/creators'
+    }) %>
+</head>
+<body>
+    <%- include('partials/preloader') %>
+
+    <div class="bg-gradient"></div>
+    <div class="page-content" id="pageContent">
+        <div class="particles" id="particles"></div>
+        
+        <%- include('partials/navbar', { activePage: 'creators' }) %>
+
+        <section class="page-hero">
+            <div class="section-header">
+                <span class="section-badge">Meet The Team</span>
+                <h1 class="section-title">Creator</h1>
+                <p class="section-subtitle">The minds behind The Vocals</p>
+            </div>
+        </section>
+
+        <section class="creators-section">
+            <div class="creators-grid">
+                <div class="creator-card">
+                    <div class="creator-avatar">
+                        <img src="/images/Daisu.jpg" alt="Developer">
+                    </div>
+                    <h3>CodeWithDaisukie</h3>
+                    <span class="creator-role">Founder & Lead Developer</span>
+                    <p>Passionate about creating the best Discord music experience.</p>
+                    <div class="creator-socials">
+                        <a href="https://discord.gg/kRhRQuh8Am" title="Discord"><i class="bi bi-discord"></i></a>
+                        <a href="https://github.com/DaisuKiee" title="GitHub"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/footer') %>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

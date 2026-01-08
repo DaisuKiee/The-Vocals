@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', { 
+        title: 'Privacy Policy', 
+        description: 'Privacy Policy for The Vocals Discord music bots.',
+        canonical: '/privacy'
+    }) %>
+</head>
+<body>
+    <%- include('partials/preloader') %>
+
+    <div class="bg-gradient"></div>
+    <div class="page-content" id="pageContent">
+        <div class="particles" id="particles"></div>
+        
+        <%- include('partials/navbar', { activePage: 'privacy' }) %>
+
+        <section class="page-hero">
+            <div class="section-header">
+                <span class="section-badge"><i class="bi bi-shield-lock"></i> Legal</span>
+                <h1 class="section-title">Privacy Policy</h1>
+                <p class="section-subtitle">Last updated: January 2026</p>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <div class="legal-content">
+                <div class="legal-card">
+                    <h2><i class="bi bi-info-circle"></i> Introduction</h2>
+                    <p>The Vocals ("we", "our", "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect information when you use our Discord bots (VocalVibes and VibeTunes).</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-database"></i> Information We Collect</h2>
+                    <p>We collect minimal data necessary to provide our services:</p>
+                    <ul>
+                        <li><strong>Server IDs:</strong> To save server-specific settings and preferences</li>
+                        <li><strong>User IDs:</strong> To manage queues and user preferences</li>
+                        <li><strong>Command Usage:</strong> To improve our services and fix bugs</li>
+                    </ul>
+                    <p>We do NOT collect:</p>
+                    <ul>
+                        <li>Message content (except bot commands)</li>
+                        <li>Personal information (email, name, etc.)</li>
+                        <li>Voice data or recordings</li>
+                    </ul>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-gear"></i> How We Use Information</h2>
+                    <ul>
+                        <li>To provide and maintain our bot services</li>
+                        <li>To save your server settings and preferences</li>
+                        <li>To improve and optimize our services</li>
+                        <li>To detect and prevent abuse or violations</li>
+                    </ul>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-hdd-stack"></i> Data Storage</h2>
+                    <p>Your data is stored securely on protected servers. We retain data only as long as necessary to provide our services. When a bot is removed from a server, associated data may be deleted after a reasonable period.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-share"></i> Data Sharing</h2>
+                    <p>We do NOT sell, trade, or share your data with third parties, except:</p>
+                    <ul>
+                        <li>When required by law</li>
+                        <li>To protect our rights or safety</li>
+                        <li>With service providers who help operate our bots (under strict confidentiality)</li>
+                    </ul>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-person-check"></i> Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Request access to your data</li>
+                        <li>Request deletion of your data</li>
+                        <li>Opt out of data collection by not using our services</li>
+                    </ul>
+                    <p>To exercise these rights, contact us through our Discord server.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-shield-check"></i> Security</h2>
+                    <p>We implement appropriate security measures to protect your data. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-people"></i> Children's Privacy</h2>
+                    <p>Our services are not directed to children under 13. We do not knowingly collect information from children under 13. If you believe we have collected such information, please contact us.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-arrow-repeat"></i> Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. We will notify users of significant changes through our Discord server. Continued use of our services after changes constitutes acceptance.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-envelope"></i> Contact Us</h2>
+                    <p>If you have questions about this Privacy Policy or your data, please contact us through our <a href="https://discord.gg/kRhRQuh8Am">Discord server</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/footer') %>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

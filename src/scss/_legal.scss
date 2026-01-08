@@ -1,0 +1,64 @@
+@use 'variables' as *;
+
+// Legal Pages
+.legal-section {
+    padding: 2rem 2rem 6rem;
+}
+
+.legal-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-card {
+    background: $glass-bg;
+    border: 1px solid $glass-border;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+
+    h2 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: $text-light;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        i {
+            color: $accent-purple;
+        }
+    }
+
+    p {
+        color: $text-muted;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        color: $text-muted;
+        padding-left: 1.5rem;
+        line-height: 2;
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    a {
+        color: $accent-blue;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $accent-purple;
+        }
+    }
+}

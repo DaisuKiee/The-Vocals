@@ -1,0 +1,16 @@
+// Main SCSS file - imports all partials
+@use 'variables' as *;
+@use 'base';
+@use 'preloader';
+@use 'navbar';
+@use 'buttons';
+@use 'hero';
+@use '3d-elements' as three-d;
+@use 'sections';
+@use 'bots';
+@use 'features';
+@use 'creators';
+@use 'sponsors';
+@use 'legal';
+@use 'footer';
+@use 'responsive';

@@ -1,0 +1,90 @@
+@use 'variables' as *;
+
+// Buttons
+.btn {
+    padding: 1rem 2.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    i {
+        font-size: 1.1rem;
+    }
+}
+
+.btn-primary {
+    background: $accent-gradient;
+    color: white;
+    box-shadow: 0 4px 25px rgba($accent-purple, 0.35);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 35px rgba($accent-purple, 0.5);
+    }
+}
+
+.btn-secondary {
+    background: $glass-bg;
+    color: $text-light;
+    border: 1px solid $glass-border;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: $accent-purple;
+        transform: translateY(-3px);
+    }
+}
+
+.btn-invite {
+    background: $accent-gradient;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba($accent-purple, 0.3);
+    border-radius: 12px;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 30px rgba($accent-purple, 0.5);
+    }
+}
+
+.btn-discord {
+    background: linear-gradient(135deg, $discord-blue 0%, $discord-blue-light 100%);
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 4px 25px rgba($discord-blue, 0.35);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 35px rgba($discord-blue, 0.5);
+    }
+
+    span {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.btn-sponsor {
+    background: linear-gradient(135deg, $sponsor-gold 0%, $sponsor-gold-dark 100%);
+    color: white;
+    box-shadow: 0 4px 25px rgba($sponsor-gold, 0.35);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 35px rgba($sponsor-gold, 0.5);
+    }
+}

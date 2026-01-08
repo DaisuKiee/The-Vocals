@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', { 
+        title: 'Sponsors', 
+        description: 'Support The Vocals Discord music bots. Become a sponsor and help keep the music playing.',
+        canonical: '/sponsors'
+    }) %>
+</head>
+<body>
+    <%- include('partials/preloader') %>
+
+    <div class="bg-gradient"></div>
+    <div class="page-content" id="pageContent">
+        <div class="particles" id="particles"></div>
+        
+        <%- include('partials/navbar', { activePage: 'sponsors' }) %>
+
+        <section class="page-hero">
+            <div class="section-header">
+                <span class="section-badge">Support Us</span>
+                <h1 class="section-title">Sponsors</h1>
+                <p class="section-subtitle">Help keep The Vocals running</p>
+            </div>
+        </section>
+
+        <section class="sponsors-section">
+            <div class="sponsors-content">
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <div class="sponsor-avatar">
+                            <img src="/images/mike.png" alt="Sponsor 1">
+                        </div>
+                        <h3>mikeisnotonline</h3>
+                        <span class="sponsor-tier"><i class="bi bi-gem"></i> Sponsor</span>
+                        <p>Vaburat gekko main<br><br>PINOY CENTRAL<br><a href="https://discord.gg/XjN5m9BR">discord.gg/XjN5m9BR</a></p>
+                        <a href="https://discord.gg/kRhRQuh8Am" class="sponsor-link"><i class="bi bi-link-45deg"></i> Visit</a>
+                    </div>
+
+                    <div class="sponsor-card">
+                        <div class="sponsor-avatar">
+                            <img src="/images/jared.webp" alt="Sponsor 2">
+                        </div>
+                        <h3>_jayyrillah</h3>
+                        <span class="sponsor-tier"><i class="bi bi-gem"></i> Sponsor</span>
+                        <p>𝙏𝙝𝙚 𝙙𝙧𝙚𝙖𝙢 𝙞𝙨 𝙛𝙧𝙚𝙚 𝙖𝙣𝙙 𝙩𝙝𝙚 𝙝𝙪𝙨𝙩𝙡𝙚 𝙞𝙨 𝙨𝙤𝙡𝙙 𝙨𝙚𝙥𝙖𝙧𝙖𝙩𝙚𝙡𝙮</p>
+                        <a href="https://discord.gg/kRhRQuh8Am" class="sponsor-link"><i class="bi bi-link-45deg"></i> Visit</a>
+                    </div>
+                </div>
+
+                <div class="sponsor-placeholder">
+                    <span class="sponsor-icon"><i class="bi bi-gem"></i></span>
+                    <h3>Become a Sponsor</h3>
+                    <p>Support The Vocals and get your name featured here. Help us maintain and improve our bots!</p>
+                    <a href="https://discord.gg/kRhRQuh8Am" class="btn btn-sponsor"><i class="bi bi-envelope"></i> Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/footer') %>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

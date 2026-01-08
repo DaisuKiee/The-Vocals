@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', { 
+        title: 'Terms of Service', 
+        description: 'Terms of Service for The Vocals Discord music bots.',
+        canonical: '/terms'
+    }) %>
+</head>
+<body>
+    <%- include('partials/preloader') %>
+
+    <div class="bg-gradient"></div>
+    <div class="page-content" id="pageContent">
+        <div class="particles" id="particles"></div>
+        
+        <%- include('partials/navbar', { activePage: 'terms' }) %>
+
+        <section class="page-hero">
+            <div class="section-header">
+                <span class="section-badge"><i class="bi bi-file-text"></i> Legal</span>
+                <h1 class="section-title">Terms of Service</h1>
+                <p class="section-subtitle">Last updated: January 2026</p>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <div class="legal-content">
+                <div class="legal-card">
+                    <h2><i class="bi bi-1-circle"></i> Acceptance of Terms</h2>
+                    <p>By using The Vocals bots (VocalVibes and VibeTunes), you agree to these Terms of Service. If you do not agree, please do not use our services.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-2-circle"></i> Description of Service</h2>
+                    <p>The Vocals provides Discord music bots that allow users to play music and use karaoke features in their Discord servers. Our services are provided "as is" and may be modified or discontinued at any time.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-3-circle"></i> User Responsibilities</h2>
+                    <ul>
+                        <li>You must comply with Discord's Terms of Service</li>
+                        <li>You must not use our bots for illegal activities</li>
+                        <li>You must not attempt to exploit, hack, or abuse our services</li>
+                        <li>You must not use our bots to harass or harm others</li>
+                        <li>You are responsible for the content played through our bots</li>
+                    </ul>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-4-circle"></i> Intellectual Property</h2>
+                    <p>The Vocals, VocalVibes, and VibeTunes names, logos, and related content are our intellectual property. Users retain ownership of their own content but grant us license to process it through our services.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-5-circle"></i> Limitation of Liability</h2>
+                    <p>The Vocals is not liable for any damages arising from the use of our services. We do not guarantee uptime or availability, though we strive for 99.9% uptime.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-6-circle"></i> Termination</h2>
+                    <p>We reserve the right to terminate or suspend access to our services at any time, without notice, for conduct that we believe violates these Terms or is harmful to other users.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-7-circle"></i> Changes to Terms</h2>
+                    <p>We may update these Terms at any time. Continued use of our services after changes constitutes acceptance of the new Terms.</p>
+                </div>
+
+                <div class="legal-card">
+                    <h2><i class="bi bi-envelope"></i> Contact</h2>
+                    <p>For questions about these Terms, please contact us through our <a href="https://discord.gg/kRhRQuh8Am">Discord server</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/footer') %>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

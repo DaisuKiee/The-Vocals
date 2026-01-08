@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', { 
+        title: 'Discord Music Bots | VocalVibes & VibeTunes', 
+        description: 'The Vocals - Official support server for VocalVibes and VibeTunes Discord music bots. High-quality audio streaming, karaoke features, and 24/7 uptime.',
+        canonical: '/'
+    }) %>
+</head>
+<body>
+    <%- include('partials/preloader') %>
+
+    <div class="bg-gradient"></div>
+    <div class="page-content" id="pageContent">
+        <div class="particles" id="particles"></div>
+        
+        <%- include('partials/navbar', { activePage: 'home' }) %>
+
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="bi bi-music-note-beamed"></i> Official Support Server</div>
+                <h1 class="hero-title">THE VOCALS</h1>
+                <p class="hero-subtitle">Your ultimate music companion for Discord. Experience high-quality audio streaming with our powerful, feature-rich bots.</p>
+                <div class="hero-buttons">
+                    <a href="#bots" class="btn btn-primary">
+                        <i class="bi bi-stars"></i> Explore Bots
+                    </a>
+                    <a href="#support" class="btn btn-secondary">
+                        <i class="bi bi-chat-dots"></i> Join Community
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 3D Floating Vinyl Disc -->
+            <div class="hero-3d-element">
+                <div class="vinyl-3d">
+                    <div class="vinyl-glow"></div>
+                    <div class="vinyl-disc"></div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="equalizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bots" class="bots-section">
+            <!-- 3D Headphones Background -->
+            <div class="section-3d-element section-3d-left">
+                <div class="headphones-3d">
+                    <div class="glow"></div>
+                    <div class="headphones-wrapper">
+                        <div class="headband"></div>
+                        <div class="ear-cup left"></div>
+                        <div class="ear-cup right"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-header">
+                <span class="section-badge">Our Bots</span>
+                <h2 class="section-title">Choose Your Companion</h2>
+                <p class="section-subtitle">Powerful music bots designed for the best Discord experience</p>
+            </div>
+            
+            <div class="bots-grid">
+                <div class="bot-card">
+                    <div class="bot-badge"><i class="bi bi-trophy"></i> #1 Karaoke Bot</div>
+                    <img src="/images/vocalvibes.jpg" alt="VocalVibes" class="bot-logo">
+                    <h3>Vocal Vibes</h3>
+                    <p>Transform your Discord server into the ultimate karaoke stage with queue management and unforgettable singing experiences.</p>
+                    <ul class="bot-features">
+                        <li><i class="bi bi-mic"></i> Karaoke stage system</li>
+                        <li><i class="bi bi-list-ol"></i> Queue management</li>
+                        <li><i class="bi bi-volume-mute"></i> Auto-mute feature</li>
+                        <li><i class="bi bi-music-note"></i> Song catalog</li>
+                    </ul>
+                    <a href="https://vocalvibes.thevocals.org" class="btn btn-invite">Visit VocalVibes</a>
+                </div>
+                
+                <div class="bot-card">
+                    <div class="bot-badge"><i class="bi bi-music-note-list"></i> Music Bot</div>
+                    <img src="/images/vibetunes.jpg" alt="VibeTunes" class="bot-logo">
+                    <h3>VibeTunes</h3>
+                    <p>High-quality music playback for your Discord server. Multiple bots, zero lag, endless vibes.</p>
+                    <ul class="bot-features">
+                        <li><i class="bi bi-music-note"></i> High-quality playback</li>
+                        <li><i class="bi bi-robot"></i> Multiple bots support</li>
+                        <li><i class="bi bi-lightning"></i> Zero lag streaming</li>
+                        <li><i class="bi bi-music-note-list"></i> Endless vibes</li>
+                    </ul>
+                    <a href="https://vibetunes.thevocals.org" class="btn btn-invite">Visit VibeTunes</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <!-- 3D Music Cube Background -->
+            <div class="section-3d-element section-3d-right">
+                <div class="music-cube">
+                    <div class="cube-glow"></div>
+                    <div class="cube">
+                        <div class="face front"><i class="bi bi-music-note-beamed"></i></div>
+                        <div class="face back"><i class="bi bi-vinyl"></i></div>
+                        <div class="face right"><i class="bi bi-headphones"></i></div>
+                        <div class="face left"><i class="bi bi-mic"></i></div>
+                        <div class="face top"><i class="bi bi-soundwave"></i></div>
+                        <div class="face bottom"><i class="bi bi-speaker"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-header">
+                <span class="section-badge">Features</span>
+                <h2 class="section-title">Why Choose Us?</h2>
+                <p class="section-subtitle">Experience music like never before</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="bi bi-headphones"></i></span>
+                    <h4>Premium Audio</h4>
+                    <p>Crystal clear sound quality with no interruptions or lag</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="bi bi-lightning-charge"></i></span>
+                    <h4>Lightning Fast</h4>
+                    <p>Instant response times for a seamless experience</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="bi bi-globe"></i></span>
+                    <h4>Multi-Platform</h4>
+                    <p>Support for YouTube, Spotify, SoundCloud & more</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="bi bi-shield-check"></i></span>
+                    <h4>99.9% Uptime</h4>
+                    <p>Reliable service you can always count on</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="bi bi-sliders"></i></span>
+                    <h4>Easy Controls</h4>
+                    <p>Intuitive commands that anyone can use</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><i class="bi bi-chat-left-text"></i></span>
+                    <h4>24/7 Support</h4>
+                    <p>Our dedicated team is always here to help</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <!-- Floating Music Notes -->
+            <div class="floating-notes">
+                <i class="bi bi-music-note note"></i>
+                <i class="bi bi-music-note-beamed note"></i>
+                <i class="bi bi-music-note note"></i>
+                <i class="bi bi-music-note-beamed note"></i>
+                <i class="bi bi-music-note note"></i>
+                <i class="bi bi-music-note-beamed note"></i>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Public Bots</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Vibes</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="support-section">
+            <!-- 3D Sound Ring Background Left -->
+            <div class="section-3d-element section-3d-left">
+                <div class="sound-ring-3d">
+                    <div class="ring-glow"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="center-icon"><i class="bi bi-disc"></i></div>
+                </div>
+            </div>
+            
+            <!-- 3D Sound Ring Background Right -->
+            <div class="section-3d-element section-3d-right">
+                <div class="sound-ring-3d small">
+                    <div class="ring-glow"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="center-icon"><i class="bi bi-music-note"></i></div>
+                </div>
+            </div>
+            
+            <div class="support-card">
+                <h2>Join Our Community</h2>
+                <p>Get help, share feedback, request features, and connect with other music lovers in our Discord server.</p>
+                <a href="https://discord.gg/kRhRQuh8Am" class="btn btn-discord">
+                    <i class="bi bi-discord"></i> Join Support Server
+                </a>
+            </div>
+        </section>
+
+        <%- include('partials/footer') %>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
