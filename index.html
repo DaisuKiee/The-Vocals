@@ -3,39 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vocals - Support Server</title>
+    <title>The Vocals - Discord Music Bots | VocalVibes & VibeTunes</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="The Vocals - Official support server for VocalVibes and VibeTunes Discord music bots. High-quality audio streaming, karaoke features, and 24/7 uptime.">
+    <meta name="keywords" content="Discord music bot, karaoke bot, VocalVibes, VibeTunes, Discord audio streaming, Discord karaoke, music bot">
+    <meta name="author" content="The Vocals">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thevocals.org">
+    
+    <!-- Open Graph / Facebook / Discord -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thevocals.org">
+    <meta property="og:title" content="The Vocals - Discord Music Bots">
+    <meta property="og:description" content="Your ultimate music companion for Discord. High-quality audio streaming with VocalVibes and VibeTunes.">
+    <meta property="og:image" content="https://thevocals.org/icon.jpg">
+    <meta property="og:site_name" content="The Vocals">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://thevocals.org">
+    <meta name="twitter:title" content="The Vocals - Discord Music Bots">
+    <meta name="twitter:description" content="Your ultimate music companion for Discord. High-quality audio streaming with VocalVibes and VibeTunes.">
+    <meta name="twitter:image" content="https://thevocals.org/icon.jpg">
+    
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" href="icon.jpg" type="image/jpeg">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="icon.jpg" alt="The Vocals" class="preloader-logo">
+            <div class="preloader-spinner"></div>
+            <span class="preloader-text">Loading...</span>
+        </div>
+    </div>
+
     <div class="bg-gradient"></div>
+    <div class="page-content" id="pageContent">
     <div class="particles" id="particles"></div>
     
     <nav class="navbar">
-        <a href="#home" class="nav-brand">
+        <a href="index.html" class="nav-brand">
             <img src="icon.jpg" alt="The Vocals" class="brand-logo">
             <span>The Vocals</span>
         </a>
-        <div class="nav-links">
-            <a href="#home">Home</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
             <a href="#bots">Our Bots</a>
             <a href="#features">Features</a>
+            <a href="creators.html">Creators</a>
+            <a href="sponsors.html">Sponsors</a>
             <a href="#support">Support</a>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="hero-badge">🎵 Official Support Server</div>
+            <div class="hero-badge"><i class="bi bi-music-note-beamed"></i> Official Support Server</div>
             <h1 class="hero-title">THE VOCALS</h1>
             <p class="hero-subtitle">Your ultimate music companion for Discord. Experience high-quality audio streaming with our powerful, feature-rich bots.</p>
             <div class="hero-buttons">
                 <a href="#bots" class="btn btn-primary">
-                    <span>✨</span> Explore Bots
+                    <i class="bi bi-stars"></i> Explore Bots
                 </a>
                 <a href="#support" class="btn btn-secondary">
-                    <span>💬</span> Join Community
+                    <i class="bi bi-chat-dots"></i> Join Community
                 </a>
             </div>
         </div>
@@ -63,31 +104,31 @@
         
         <div class="bots-grid">
             <div class="bot-card">
-                <div class="bot-badge">🏆 #1 Karaoke Bot</div>
+                <div class="bot-badge"><i class="bi bi-trophy"></i> #1 Karaoke Bot</div>
                 <img src="vocalvibes.jpg" alt="VocalVibes" class="bot-logo">
                 <h3>Vocal Vibes</h3>
                 <p>Transform your Discord server into the ultimate karaoke stage with queue management and unforgettable singing experiences.</p>
                 <ul class="bot-features">
-                    <li><span>🎤</span> Karaoke stage system</li>
-                    <li><span>📋</span> Queue management</li>
-                    <li><span>🔇</span> Auto-mute feature</li>
-                    <li><span>🎵</span> Song catalog</li>
+                    <li><i class="bi bi-mic"></i> Karaoke stage system</li>
+                    <li><i class="bi bi-list-ol"></i> Queue management</li>
+                    <li><i class="bi bi-volume-mute"></i> Auto-mute feature</li>
+                    <li><i class="bi bi-music-note"></i> Song catalog</li>
                 </ul>
-                <a href="#" class="btn btn-invite">Visit VocalVibes</a>
+                <a href="https://vocalvibes.thevocals.org" class="btn btn-invite">Visit VocalVibes</a>
             </div>
             
             <div class="bot-card">
-                <div class="bot-badge">🎶 Music Bot</div>
+                <div class="bot-badge"><i class="bi bi-music-note-list"></i> Music Bot</div>
                 <img src="vibetunes.jpg" alt="VibeTunes" class="bot-logo">
                 <h3>VibeTunes</h3>
                 <p>High-quality music playback for your Discord server. Multiple bots, zero lag, endless vibes.</p>
                 <ul class="bot-features">
-                    <li><span>🎵</span> High-quality playback</li>
-                    <li><span>🤖</span> Multiple bots support</li>
-                    <li><span>⚡</span> Zero lag streaming</li>
-                    <li><span>🎶</span> Endless vibes</li>
+                    <li><i class="bi bi-music-note"></i> High-quality playback</li>
+                    <li><i class="bi bi-robot"></i> Multiple bots support</li>
+                    <li><i class="bi bi-lightning"></i> Zero lag streaming</li>
+                    <li><i class="bi bi-music-note-list"></i> Endless vibes</li>
                 </ul>
-                <a href="#" class="btn btn-invite">Visit VibeTunes</a>
+                <a href="https://vibetunes.thevocals.org" class="btn btn-invite">Visit VibeTunes</a>
             </div>
         </div>
     </section>
@@ -101,32 +142,32 @@
         
         <div class="features-grid">
             <div class="feature-card">
-                <span class="feature-icon">🎧</span>
+                <span class="feature-icon"><i class="bi bi-headphones"></i></span>
                 <h4>Premium Audio</h4>
                 <p>Crystal clear sound quality with no interruptions or lag</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">⚡</span>
+                <span class="feature-icon"><i class="bi bi-lightning-charge"></i></span>
                 <h4>Lightning Fast</h4>
                 <p>Instant response times for a seamless experience</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🌐</span>
+                <span class="feature-icon"><i class="bi bi-globe"></i></span>
                 <h4>Multi-Platform</h4>
                 <p>Support for YouTube, Spotify, SoundCloud & more</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🛡️</span>
+                <span class="feature-icon"><i class="bi bi-shield-check"></i></span>
                 <h4>99.9% Uptime</h4>
                 <p>Reliable service you can always count on</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🎛️</span>
+                <span class="feature-icon"><i class="bi bi-sliders"></i></span>
                 <h4>Easy Controls</h4>
                 <p>Intuitive commands that anyone can use</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">💬</span>
+                <span class="feature-icon"><i class="bi bi-chat-left-text"></i></span>
                 <h4>24/7 Support</h4>
                 <p>Our dedicated team is always here to help</p>
             </div>
@@ -154,8 +195,8 @@
         <div class="support-card">
             <h2>Join Our Community</h2>
             <p>Get help, share feedback, request features, and connect with other music lovers in our Discord server.</p>
-            <a href="#" class="btn btn-discord">
-                <span>💬</span> Join Support Server
+            <a href="https://discord.gg/kRhRQuh8Am" class="btn btn-discord">
+                <i class="bi bi-discord"></i> Join Support Server
             </a>
         </div>
     </section>
@@ -168,13 +209,14 @@
             </div>
             <p>© 2026 The Vocals. All rights reserved.</p>
             <div class="footer-links">
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-                <a href="#">Contact</a>
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="https://discord.gg/kRhRQuh8Am">Contact</a>
             </div>
         </div>
     </footer>
 
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
